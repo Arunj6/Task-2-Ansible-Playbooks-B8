@@ -15,6 +15,6 @@
         src: /home/ubuntu/beginner-html-site-styled/
         dest: /var/www/html
     - name: restart nginx
-       service:
-          name: nginx
-          state: restarted
+      service:
+         name: nginx
+         state: restarted
