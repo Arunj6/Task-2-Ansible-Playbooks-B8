@@ -1,0 +1,20 @@
+---
+- hosts: dev01
+  become: yes
+  tasks:
+    - name: apt-get update
+      apt:
+         update_cache: yes
+         cache_valid_time: 3600
+    - name: install nginx
+      apt:
+         name: ['nginx']
+         state: latest
+    - name: copy file
+      copy:
+        src: /home/ubuntu/beginner-html-site-styled/
+        dest: /var/www/html
+    - name: restart nginx
+       service:
+          name: nginx
+          state: restarted
