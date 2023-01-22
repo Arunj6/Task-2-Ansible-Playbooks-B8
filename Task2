@@ -1,0 +1,9 @@
+Task #2 Ansible Playbooks
+
+Create a playbook to deploy the Nginx server for delivering the following website
+Web Content: https://github.com/mdn/beginner-html-site-styled.git
+
+Use:
+* package manager module [distro based on]
+* service module
+* copy module
